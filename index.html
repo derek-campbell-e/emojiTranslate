@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>emoji-translate</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+  <link href='style.css' rel='stylesheet' type='text/css'>
+  <script
+  src="http://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src='app.js' type='text/javascript'></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>From 🇬🇧</h1>
+    <p class="note">(just start typing!)</p>
+    <textarea id="input">OMG!!! The house is on fire and the cat is eating all the donuts!</textarea>
+    <br><br>
+    <h1>To ✨emoji✨ <button id="translateButton">Translate!</button></h1>
+    <div id="output"></div>
+    <div id="footer">
+        <p>made with <span class="red">❤︎</span> by <a href="https://twitter.com/neillloool">Neill</a>.
+      </p>
+    </div>
+  </div>
+
+  <!-- Gigantor hack to get the copy-to-clipboard working. I don't think it
+  works with hidden divs, so uhhhh just hide this one real well -->
+  <div id="clipboardContents"></div>
+
+
+  
+</body>
+</html>
