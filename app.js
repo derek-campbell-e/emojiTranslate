@@ -10,11 +10,19 @@ $(document).ready(function(){
 
 	$("#translateButton").click(function(){
 		var textInput = $("#input").val() ;    
-		alert(textInput);
+	/*	alert(textInput);
 		var words = textInput.split(' ');
 		console.log(words);
 		$(words).each(function(i, value){
-		});
+		}); */
+	$.post({
+			type: "POST",
+			url: "/translate",
+			data: {message: textInput},
+			success: function(data, status, xhr){
+				$("#output").html(data.translation);
+			}
+	})
 	});
 
 
