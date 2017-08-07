@@ -11,10 +11,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "emojilib": "^2.2.7",
     "express": "^4.15.3",
     "jquery": "^3.2.1",
-    "body-parser": "^1.17.2",
-    "emojilib": "^2.2.7",
+    "mongoose": "^4.11.5",
     "natural": "^0.5.4"
   }
 }

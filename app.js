@@ -2,10 +2,7 @@ $(document).ready(function(){
 	console.log('hello world');
 	var json = $.getJSON("emojis.json", 
 		function(result){ 
-			$.each(result, function(i, field){ 
-				console.log(i);
-				console.warn(field);
-			}); 
+			console.log('got result')
 		});
 
 	$("#translateButton").click(function(){
@@ -21,6 +18,7 @@ $(document).ready(function(){
 			data: {message: textInput},
 			success: function(data, status, xhr){
 				$("#output").html(data.translation);
+			/*	$("translatefeed").html(data.translation); */
 			}
 	})
 	});
