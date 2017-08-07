@@ -15,6 +15,7 @@
     "cors": "^2.8.4",
     "emojilib": "^2.2.7",
     "express": "^4.15.3",
+    "jquery": "^3.2.1",
     "mongoose": "^4.11.5",
     "natural": "^0.5.4",
     "nodemon": "^1.11.0"
