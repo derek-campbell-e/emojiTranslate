@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "nodemon",
     "dec-test": "nodemon server.js"
   },
   "author": "",
@@ -17,7 +17,8 @@
     "express": "^4.15.3",
     "jquery": "^3.2.1",
     "mongoose": "^4.11.5",
-    "natural": "^0.5.4"
+    "natural": "^0.5.4",
+    "nodemon": "^1.11.0"
   },
   "engines": {
     "node": "7.9.0",

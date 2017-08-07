@@ -8,8 +8,7 @@ var emojiTranslate  = require('./src/emojiTranslate')();
 var Schema = mongoose.Schema;
 var app = express();
 
-var staticPath = path.join(__dirname, '/');
-app.use(express.static(staticPath));
+app.use(express.static('public'));
 
 /**
  * express additions for handling post requests
@@ -43,7 +42,7 @@ app.get('/hello', function (req, res) { res.send('GET request to the homepage') 
 
 var Model = mongoose.model('Model', schemaName);
 console.log('BEFORE APP GET');
-app.get('/', cors(), function(req, res) { 
+/* app.get('/', cors(), function(req, res) { 
 	var query = req.params.query; 
 	console.log(req);
 	console.log(res);
@@ -53,7 +52,7 @@ app.get('/', cors(), function(req, res) {
 		else { res.send(JSON.stringify({ 
 			error : 'Error' })) } 
 	}) 
-})
+}) */
 console.log('AFTER APP GET');
 
 /**
@@ -68,7 +67,7 @@ app.post("/translate", function(req, res){
 });
 
 
-app.listen(8080, function() {
+app.listen(8080 || process.env.PORT, function() {
   console.log('listening');
 });
 
