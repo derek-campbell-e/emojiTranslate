@@ -1,9 +1,9 @@
 $(document).ready(function(){
 	console.log('hello world');
-	var json = $.getJSON("emojis.json", 
-		function(result){ 
-			console.log('got result')
-		});
+	// var json = $.getJSON("emojis.json", 
+	//	function(result){ 
+	//		console.log('got result')
+	//	});
 
 	$("#translateButton").click(function(){
 		var textInput = $("#input").val() ;    

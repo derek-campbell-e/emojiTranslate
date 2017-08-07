@@ -67,7 +67,7 @@ app.post("/translate", function(req, res){
 });
 
 
-app.listen(8080 || process.env.PORT, function() {
+app.listen(process.env.PORT || 5000, function() {
   console.log('listening');
 });
 
