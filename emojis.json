@@ -66,7 +66,7 @@
     "category": "people"
   },
   "blush": {
-    "keywords": ["face", "smile", "happy", "flushed", "crush", "embarrassed", "shy", "joy"],
+    "keywords": ["me","face", "smile", "happy", "flushed", "crush", "embarrassed", "shy", "joy"],
     "char": "😊",
     "fitzpatrick_scale": false,
     "category": "people"
@@ -2598,7 +2598,7 @@
     "category": "animals_and_nature"
   },
   "fire": {
-    "keywords": ["hot", "cook", "flame"],
+    "keywords": ["hot", "cook", "flame", "fire", "heat"],
     "char": "🔥",
     "fitzpatrick_scale": false,
     "category": "animals_and_nature"
@@ -2682,7 +2682,7 @@
     "category": "animals_and_nature"
   },
   "ocean": {
-    "keywords": ["sea", "water", "wave", "nature", "tsunami", "disaster"],
+    "keywords": ["sea", "water", "wave", "nature", "tsunami", "disaster", "waves"],
     "char": "🌊",
     "fitzpatrick_scale": false,
     "category": "animals_and_nature"
@@ -2784,7 +2784,7 @@
     "category": "food_and_drink"
   },
   "eggplant": {
-    "keywords": ["vegetable", "nature", "food", "aubergine"],
+    "keywords": ["vegetable", "nature", "food", "aubergine", "eggplant?"],
     "char": "🍆",
     "fitzpatrick_scale": false,
     "category": "food_and_drink"
@@ -5160,13 +5160,13 @@
     "category": "objects"
   },
   "page_with_curl": {
-    "keywords": ["documents", "office", "paper"],
+    "keywords": ["documents", "office", "paper", "report", "facts"],
     "char": "📃",
     "fitzpatrick_scale": false,
     "category": "objects"
   },
   "bookmark_tabs": {
-    "keywords": ["favorite", "save", "order", "tidy"],
+    "keywords": ["favorite", "save", "order", "tidy", "test", "report"],
     "char": "📑",
     "fitzpatrick_scale": false,
     "category": "objects"
@@ -6258,43 +6258,43 @@
     "category": "symbols"
   },
   "ng": {
-    "keywords": ["blue-square", "words", "shape", "icon"],
+    "keywords": ["blue-square", "words", "shape", "icon", "not"],
     "char": "🆖",
     "fitzpatrick_scale": false,
     "category": "symbols"
   },
   "ok": {
-    "keywords": ["good", "agree", "yes", "blue-square"],
+    "keywords": ["good", "agree", "yes", "blue-square", "sure", "whatever", "ok", "okay"],
     "char": "🆗",
     "fitzpatrick_scale": false,
     "category": "symbols"
   },
   "up": {
-    "keywords": ["blue-square", "above", "high"],
+    "keywords": ["blue-square", "above", "high", "up"],
     "char": "🆙",
     "fitzpatrick_scale": false,
     "category": "symbols"
   },
   "cool": {
-    "keywords": ["words", "blue-square"],
+    "keywords": ["words", "blue-square", "cool", "rad", "gnarly", "kewl", "kool"],
     "char": "🆒",
     "fitzpatrick_scale": false,
     "category": "symbols"
   },
   "new": {
-    "keywords": ["blue-square", "words", "start"],
+    "keywords": ["blue-square", "words", "start", "beginning", "new", "fresh"],
     "char": "🆕",
     "fitzpatrick_scale": false,
     "category": "symbols"
   },
   "free": {
-    "keywords": ["blue-square", "words"],
+    "keywords": ["blue-square", "words", "free"],
     "char": "🆓",
     "fitzpatrick_scale": false,
     "category": "symbols"
   },
   "zero": {
-    "keywords": ["0", "numbers", "blue-square", "null"],
+    "keywords": ["0", "numbers", "blue-square", "null", "none", "zero"],
     "char": "0️⃣",
     "fitzpatrick_scale": false,
     "category": "symbols"
@@ -6366,7 +6366,7 @@
     "category": "symbols"
   },
   "1234": {
-    "keywords": ["numbers", "blue-square"],
+    "keywords": ["numbers", "blue-square", "number"],
     "char": "🔢",
     "fitzpatrick_scale": false,
     "category": "symbols"
@@ -6474,25 +6474,25 @@
     "category": "symbols"
   },
   "arrow_right": {
-    "keywords": ["blue-square", "next"],
+    "keywords": ["blue-square", "next", "right"],
     "char": "➡️",
     "fitzpatrick_scale": false,
     "category": "symbols"
   },
   "arrow_left": {
-    "keywords": ["blue-square", "previous", "back"],
+    "keywords": ["blue-square", "previous", "back", "left"],
     "char": "⬅️",
     "fitzpatrick_scale": false,
     "category": "symbols"
   },
   "arrow_up": {
-    "keywords": ["blue-square", "continue", "top", "direction"],
+    "keywords": ["blue-square", "continue", "top", "direction", "up"],
     "char": "⬆️",
     "fitzpatrick_scale": false,
     "category": "symbols"
   },
   "arrow_down": {
-    "keywords": ["blue-square", "direction", "bottom"],
+    "keywords": ["blue-square", "direction", "bottom", "down"],
     "char": "⬇️",
     "fitzpatrick_scale": false,
     "category": "symbols"
@@ -7716,7 +7716,7 @@
     "category": "flags"
   },
   "india": {
-    "keywords": ["in", "flag", "nation", "country", "banner"],
+    "keywords": ["flag", "nation", "country", "banner"],
     "char": "🇮🇳",
     "fitzpatrick_scale": false,
     "category": "flags"
@@ -7757,7 +7757,7 @@
     "fitzpatrick_scale": false,
     "category": "flags"
   },
-  "it": {
+  "italy": {
     "keywords": ["italy", "flag", "nation", "country", "banner"],
     "char": "🇮🇹",
     "fitzpatrick_scale": false,
@@ -7992,7 +7992,7 @@
     "category": "flags"
   },
   "montenegro": {
-    "keywords": ["me", "flag", "nation", "country", "banner"],
+    "keywords": ["flag", "nation", "country", "banner"],
     "char": "🇲🇪",
     "fitzpatrick_scale": false,
     "category": "flags"
@@ -8418,7 +8418,7 @@
     "category": "flags"
   },
   "tanzania": {
-    "keywords": ["tanzania,", "united", "republic", "flag", "nation", "country", "banner"],
+    "keywords": ["tanzania" "republic", "flag", "nation", "country", "banner"],
     "char": "🇹🇿",
     "fitzpatrick_scale": false,
     "category": "flags"
