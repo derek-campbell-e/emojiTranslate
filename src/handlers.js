@@ -1,6 +1,18 @@
-var emoji = require('emojilib');
+var fs = require('fs');
 var natural = require("natural");
 var path = require("path");
+var humanizeString = require('humanize-string');
+
+var emoji = {};
+
+// attempt to parse custom emoji library with the emojiblib module as a backup
+try {
+  emoji.lib = JSON.parse(fs.readFileSync('./emojis.json'));
+} catch (e) {
+  console.log("cannot parse custom emoji library:\n", e);
+  emoji.lib = require('emojilib').lib;
+}
+
 
 /**
  * @class EmojiTranslateHandlers
@@ -123,9 +135,10 @@ module.exports = function EmojiTranslateHandlers(emojit){
     for(var profile in profiles){
       var index = profile;
       profile = profiles[profile];
-      if(/[!;,.]/.test(profile.word)){
-        profiles[index].withPunc = /([!;,.]{1,})/.exec(profile.word)[1];
-        profiles[index].withoutPunc = /(.*?)[!;,.]/.exec(profile.word)[1];
+      var punctuation = /[!?;,\.]/
+      if(punctuation.test(profile.word)){
+        profiles[index].withPunc = /([!?;,\.]{1,})/.exec(profile.word)[1];
+        profiles[index].withoutPunc = /(.*?)[!?;,\.]/.exec(profile.word)[1];
       }
     }
     //console.log(profiles);
@@ -168,11 +181,12 @@ module.exports = function EmojiTranslateHandlers(emojit){
 
   handlers.shouldMatch = function(profile){
     var invalidPartsOfSpeech = [
-      'VB', 'PRP$', 'RB', 'TO', 'VBZ'
+      'VB', 'PRP$', 'RB', 'TO', 'VBZ', 'DT'
     ];
 
     var word = profile.word;
     var partOfSpeech = profile.partOfSpeech;
+    //console.log(word, partOfSpeech);
 
     for(var invalidPart in invalidPartsOfSpeech){
       invalidPart = invalidPartsOfSpeech[invalidPart];
@@ -221,39 +235,6 @@ module.exports = function EmojiTranslateHandlers(emojit){
 
   handlers.matchEmojis = function(profiles){
 
-    var matchFunction = function(profile){
-
-      var safeWord = handlers.safeWord(profile).toLowerCase();
-      var singularForm = handlers.singularForm(profile).toLowerCase();
-      var word = safeWord;
-
-      for(var item in emoji.lib){
-        var itemlib = emoji.lib[item];
-        var char = itemlib.char;
-        if (word === item){
-          return char;
-        }
-        if (singularForm === item){
-          return char;
-        }
-
-        for(var keyword in itemlib.keywords){
-          keyword = itemlib.keywords[keyword];
-          if(word === keyword){
-            return char;
-          }
-          if(singularForm === keyword){
-            if(profile.plural){
-              return char + " " + char;
-            }
-            return char;
-          }
-        }
-      }
-
-      return false;
-    };
-
     for(var profile in profiles){
       var index = profile;
       profile = profiles[profile];
@@ -261,13 +242,75 @@ module.exports = function EmojiTranslateHandlers(emojit){
         continue;
       }
 
-      var matchResult = matchFunction(profile);
+
+      var matchResult = handlers.emojiMatchAlgorithm(profile);
       if(matchResult){
         profiles[index].emoji = matchResult;
       }
     }
 
     return profiles;
+  };
+
+  /**
+   * @function shouldTranslateLanguage
+   * @description a function to decide whether or not the emoji meta is the right language to translate (right now it's a bit ... prejudiced)
+   * @param {wordProfile} profile - the word profile to test the language with (will be used for more complex and less prejudiced matching later)
+   * @param {Array} keywords - keywords found from the looped emoji lib
+   * @returns {boolean} - false if should not translate based on language and true if it should
+   */
+
+  handlers.shouldTranslateLanguage = function(profile, keywords){
+    if(keywords.indexOf('kanji') !== -1){
+      return false;
+    }
+    return true;
+  };
+
+  /**
+   * @function emojiMatchAlgorithm
+   * @description loops through the emoji lib for possible matches based on keyname or emoji keywords
+   * @param {wordProfile} profile - the word profile to match emojis against
+   * @returns {string|boolean} - returns matched emoji if there is a match or false if no match found
+   */
+
+  handlers.emojiMatchAlgorithm = function(profile){
+    var safeWord = handlers.safeWord(profile).toLowerCase();
+    var singularForm = handlers.singularForm(profile).toLowerCase();
+    var word = safeWord;
+
+    for(var item in emoji.lib){
+      var itemlib = emoji.lib[item];
+      var char = itemlib.char;
+      var category = itemlib.category;
+
+      if(!handlers.shouldTranslateLanguage(profile, itemlib.keywords)){
+        continue;
+      }
+
+
+      if (word === item){
+        return char;
+      }
+      if (singularForm === item){
+        return char;
+      }
+
+      for(var keyword in itemlib.keywords){
+        keyword = itemlib.keywords[keyword];
+        if(word === keyword){
+          return char;
+        }
+        if(singularForm === keyword){
+          if(profile.plural){
+            return char + " " + char;
+          }
+          return char;
+        }
+      }
+    }
+
+    return false;
   };
 
   /**
@@ -296,6 +339,8 @@ module.exports = function EmojiTranslateHandlers(emojit){
     return message.join(" ");
   };
 
+
+  // initialize and preload the scripts
   handlers.init = function(){
     handlers.preload();
     return handlers;

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "translateemoji",
+  "private_key_id": "7b9eae70b209d423eb1abedab658b9c9136455e0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDMobUTH+9XqnT7\nctIukwOw/t8rg3jlZzhvyyDNLDvhbsE443+9pCvclEy9ld+Ek5ljtgRVJ0X/N4LE\nDe0jzh5MjAt3OlFGpoy/dNfvo/hivcO5xbHeX5p35cXXkXP5HKZG2anZxQADE+tu\niYTKHr6qSmzI/YKDOG6o1pYST7JNZSrH6Y0/e2tvhRdO/7oLB6rBz11FxNY8qzfO\nILV1Z36p0tYdGa7Sc98U3QjFSmWaTat5tzKmSjEFBjn4dh7HVTAmY176Qe5OzoCb\nZzPkgEOn0GDaPA1BuRIDrRsJ135ckaei6kuaL0ZHfSS/45oLnV+fmH5bpGSk3qv3\n/F9ZM73zAgMBAAECggEASdQp/X1vIAT68eGqXW1jTo+WOx/TFYlZPlReQEguTpZk\nFj9WTjiWLp4+1cPmAfIyzFvWUla6FWuUvWF85ocuPVXlqR2cR049x7HDWs2hBxcK\nL9NY6i86DvoSmET9P6qLf1J2yoAeEf402gu5oibXiZ8Sgq2cUfWhTz8ko/SnEu7A\nwUbrMxWM25p9gOymSN5xtTD2yXb9BU+bU/eP61PYCZdxpU8aXIV8JeqyRtTir+eL\nQR6vHT4v2eruQSpTteR+TRAmoVdb+I7WlSw8Bt33utk2JvJwVl//v1HFfny+xuz0\np63un3DDkhc4Mo3PUgXdJ9dhw5BtekAI5EmQIJ2uWQKBgQDyqNLtBIweVxT6ioG0\njpuZEMHtmVEBj3XIz4vAXUpyWa4z7yoGhOtayG8ePDUHuQW6gsn7f2SHtWG7mqsd\nYhE/EK5tt+5rM3dr28gDQGMEd3sxmjx6g64ztKtaUqjpdBpW8s5q2EG+RG+Sk8th\nXpzEGZ4zg8qYJt2y1/x6x3y5tQKBgQDX4a6mnjViPRJ1k03tLJlXMWAcKWsAbKyT\nY1OY32IvJibJFTXfdW6GcuCG1iLZ75dw2sGEEQCFjIu1jLMDu1YbZpmQkgA31DA7\noKMxmoLLvpY+La8NFl0sKSlZNVrkmNOxsHW3MHnsJpP7laUnxuXq4FJXHEu6mVYB\nYeL7E4JCBwKBgQCS9wSoYDSsu3kNNI3R2P0L+0Y4rL6O/2AKuwic/ON11jLXaWY+\nhIo2dWY3HafQgZKin0vNch5kwsnqYYZ5SUfAtk2uTdOsQYN2Y6oDrh9KOUL3i75N\nRStgTW/qSF3c5mB9gJjbxRYsMi6Qy8pFspOngQx7jrpI5GEpS/6yLdewcQKBgDFp\nHihUnbNWdxsiE/vs8UvbqTvI3wzB0t4JJeEff8F64fW0PRhgMGPldy5lZKStCeRy\nrUgk/BGVEYUEJxT7k8HBwfQs9o/QqRl8st1vl/A6NvkUS7SbIcgxw5z/cUZRFGLf\nGJJNLhq22bgDkEGCbK1NmosFlu+mmODIHsOIu4+RAoGBAIk+hcdyqyozzEmXE79W\nu6lMcUZ6wktpq22dSh6qQR5G0skMCxx2ZI0YIF9CHteHXXwjfZyBXNkkn+s9RhUS\n0t6IeGsBOoAmCykQXxiVIa9stZyEIiAn5VoI9xNXFcvevH9OY4dFe8yZIYIvA0Cy\nx4MPbyGVLwwteUNCEhh203f7\n-----END PRIVATE KEY-----\n",
+  "client_email": "derekcampbell@translateemoji.iam.gserviceaccount.com",
+  "client_id": "109365118254708518764",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/derekcampbell%40translateemoji.iam.gserviceaccount.com"
+}
